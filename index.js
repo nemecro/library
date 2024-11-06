@@ -19,5 +19,12 @@ function addBookToLibrary(title, author, pages, read){
     myLibrary.push(book);
 }
 
+function listLibrary(library){
+    library.forEach(book => {
+        console.table(book);
+    })
+}
+
 addBookToLibrary('Crime and Punishment', 'Fyodor Dostoyev', 459, 'yes');
-console.log(myLibrary);
+
+listLibrary(myLibrary);
