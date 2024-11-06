@@ -25,16 +25,17 @@ body {
 #navbar {
     background-color: var(--red);
     color: var(--blue);
-    padding: 0.25em 0.5em;
+    padding: 0.25em 1em;
+    box-shadow: 4px 8px 15px 5px #000000;
 }
 
 #navbar > header {
     display: flex;
-    font-size: 1.35em;
+    font-size: 1.25em;
     gap: 0.25em;
 }
 
 #library-logo {
-    width: 1.35em;
+    width: 1.25em;
     filter: brightness(0) saturate(100%) invert(7%) sepia(45%) saturate(1615%) hue-rotate(197deg) brightness(91%) contrast(99%);
 }
