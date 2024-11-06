@@ -1,3 +1,16 @@
-h1 {
-    color:aquamarine;
+@import url(https://fonts.bunny.net/css?family=alegreya-sans:400,400i,700);
+
+:root {
+    --orange: #FB8B24;
+    --purple: #6E44FF;
+    --green: #DEF6CA;
+    --red: #6D213C;
+    --blue: #0B132B;
+    --font: 'Alegreya Sans', sans-serif;
+}
+
+body {
+    background-color: var(--blue);
+    color: var(--purple);
+    font-family: var(--font);
 }
