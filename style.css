@@ -10,12 +10,16 @@
     --green: #DEF6CA;
     --red: #6D213C;
     --blue: #0B132B;
+
+    --background: hsl(250, 82%, 96%);
+    --text: hsl(250, 0%, 0%);
+
     --font: 'Alegreya Sans', sans-serif;
 }
 
 body {
-    background-color: var(--blue);
-    color: var(--red);
+    background-color: var(--background);
+    color: var(--text);
     font-family: var(--font);
     font-size: clamp(0.75rem, 0.797vw + 0.544rem, 1.5rem);
     line-height: clamp(1.125rem, 0.876vw + 0.898rem, 1.95rem);
@@ -24,26 +28,29 @@ body {
 }
 
 #navbar {
-    background-color: var(--red);
-    color: var(--blue);
+    color: var(--text);
     padding: 0.25em 1em;
-    box-shadow: 4px 8px 15px 5px #000000;
+    height: 10vh;
 }
 
 #navbar > header {
     display: flex;
-    font-size: 1.25em;
+    font-size: 1em;
     gap: 0.25em;
 }
 
 #library-logo {
-    width: 1.25em;
+    width: 1em;
     filter: brightness(0) saturate(100%) invert(7%) sepia(45%) saturate(1615%) hue-rotate(197deg) brightness(91%) contrast(99%);
 }
 
 #intro {
     padding: 2em;
     width: 60ch;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+
     margin: 0 auto;
     text-align: center;
 }
