@@ -7,12 +7,13 @@
 :root {
     --orange: #FB8B24;
     --purple: #6E44FF;
-    --green: #DEF6CA;
+
     --red: #6D213C;
     --blue: #0B132B;
 
     --background: hsl(250, 82%, 96%);
     --text: hsl(250, 0%, 0%);
+    --green: #198754;
 
     --font: 'Alegreya Sans', sans-serif;
 }
@@ -31,6 +32,10 @@ body {
     color: var(--text);
     padding: 0.25em 1em;
     height: 10vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #navbar > header {
@@ -39,9 +44,26 @@ body {
     gap: 0.25em;
 }
 
+#navbar > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
 #library-logo {
     width: 1em;
-    filter: brightness(0) saturate(100%) invert(7%) sepia(45%) saturate(1615%) hue-rotate(197deg) brightness(91%) contrast(99%);
+}
+
+.btn-green {
+    background-color: var(--green);
+    color: var(--background);
+    border: none;
+    padding: 0.75em 1em;
+    border-radius: 6px;
 }
 
 #intro {
