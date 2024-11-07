@@ -13,6 +13,7 @@
 
     --background: hsl(250, 82%, 96%);
     --text: hsl(250, 0%, 0%);
+    --texta: hsla(250, 0%, 0%, 70%);
     --green: #198754;
 
     --font: 'Alegreya Sans', sans-serif;
@@ -112,4 +113,26 @@ h1 {
 .book-card {
     border: 1px solid var(--text);
     text-align: center;
+}
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--texta);
+
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-form {
+    background-color: var(--background);
+    width: 50%;
+    height: fit-content;
+    padding: 0 1em 1em;
+
+    border-radius: 6px;
 }

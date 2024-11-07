@@ -28,3 +28,21 @@ function listLibrary(library){
 addBookToLibrary('Crime and Punishment', 'Fyodor Dostoyev', 459, 'yes');
 
 listLibrary(myLibrary);
+
+const main = document.querySelector('main');
+
+function displayModal(){
+    const modal = document.createElement('div');
+    const form = document.createElement('form');
+    const titleLabel = document.createElement('label');
+    const titleInput = document.createElement('input');
+
+    modal.setAttribute('class', 'fullscreen-modal');
+
+    main.appendChild(modal);
+    modal.appendChild(form);
+    form.append(titleLabel, titleInput);
+}
+
+displayModal();
+
