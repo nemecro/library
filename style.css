@@ -29,6 +29,7 @@ body {
 }
 
 #navbar {
+    background-color: var(--background);
     color: var(--text);
     padding: 0.25em 1em;
     height: 10vh;
@@ -36,6 +37,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    border-bottom: 2px solid var(--text);
 }
 
 #navbar > header {
@@ -66,10 +72,18 @@ body {
     border-radius: 6px;
 }
 
+main {
+    padding: 0 2.5em;
+}
+
+section {
+    min-height: 100vh;
+}
+
 #intro {
     padding: 2em;
     width: 60ch;
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
 
@@ -91,4 +105,15 @@ h1 {
 .container-flex-col-center > * {
     padding: 0;
     margin: 0;
+}
+
+.books-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3em;
+}
+
+.book-card {
+    border: 1px solid black;
+    text-align: center;
 }
