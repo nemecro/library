@@ -46,7 +46,8 @@ button {
     position: sticky;
     top: 0;
 
-    border-bottom: 2px solid var(--text);
+    /* border-bottom: 2px solid var(--text); */
+    box-shadow: 1px 1px 4px var(--text);
 }
 
 #navbar > header {
