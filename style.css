@@ -128,21 +128,17 @@ h1 {
 }
 
 .modal {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+    padding: 0;
+    border: 1px solid var(--text);
+    border-radius: 6px;
+}
+
+.modal::backdrop {
     background-color: var(--texta);
-
-    z-index: 1;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
 }
 
 .modal-form {
     background-color: var(--background);
-    width: 50%;
     height: fit-content;
     padding: 1em;
 

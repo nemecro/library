@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="modal">
-        <form action="" class="modal-form">
+    <dialog class="modal">
+        <form class="modal-form">
             <header class="modal-header">
                 <h2>Add new book</h2>
                 <button type="button" id="close-modal"><img src="images/x.svg" alt="close modal" class="icon-lg"></button>
@@ -17,7 +17,7 @@
                 <legend>Book information</legend>
                 <div class="label-input">
                     <label for="title">Title</label>
-                    <input type="text" name="title" id="title" required>
+                    <input type="text" name="title" id="title" autofocus required>
                 </div>
                 <div class="label-input">
                     <label for="author">Author</label>
@@ -36,9 +36,9 @@
                 <input type="radio" name="read" id="wishlist" value="wishlist">
                 <label for="wishlist">Add to wishlist</label>
             </fieldset>
-            <button id="add" class="btn-green">Add</button>
+            <button id="add" class="btn-green" formmethod="dialog">Add</button>
         </form>
-    </div>
+    </dialog>
     <nav id="navbar">
         <header>
             <img src="images/book-open.svg" alt="library logo" class="icon-lg" id="library-logo">

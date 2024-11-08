@@ -31,16 +31,25 @@ listLibrary(myLibrary);
 
 const modal = document.querySelector('.modal');
 
+// when the modal is closed, check for values
+modal.addEventListener('close', (e) => {
+    testHeading.textContent = modal.returnValue;
+});
+
 const openModelBtn = document.querySelector('#open-modal');
 openModelBtn.addEventListener('click', () => {
-    modal.setAttribute('style', 'display: flex;');
+    modal.showModal();
 });
 
 const closeModalBtn = document.querySelector('#close-modal');
+closeModalBtn.addEventListener('click', () => {
+    modal.close();
+});
 
-function closeModal(){
-    modal.setAttribute('style', 'display: none;');
-}
+const title = document.querySelector('#title');
 
-closeModalBtn.addEventListener('click', closeModal);
-
+const add = document.querySelector('#add');
+add.addEventListener('click', (event) => {
+    event.preventDefault();
+    modal.close(title.value);
+});
