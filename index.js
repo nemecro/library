@@ -33,7 +33,7 @@ const modal = document.querySelector('.modal');
 
 // when the modal is closed, check for values
 modal.addEventListener('close', (e) => {
-    testHeading.textContent = modal.returnValue;
+    console.log(modal.returnValue);
 });
 
 const openModelBtn = document.querySelector('#open-modal');
@@ -46,10 +46,22 @@ closeModalBtn.addEventListener('click', () => {
     modal.close();
 });
 
-const title = document.querySelector('#title');
+const form = document.querySelector('.modal-form');
+const formInputs = form.querySelectorAll('input');
 
 const add = document.querySelector('#add');
 add.addEventListener('click', (event) => {
     event.preventDefault();
-    modal.close(title.value);
+    let returnValue = [];
+    formInputs.forEach(input => {
+        if (input.type === 'radio'){
+            if (input.checked === true){
+                returnValue.push(input.value);
+            }
+        } else {
+            returnValue.push(input.value);
+        }
+    })
+
+    modal.close(returnValue);
 });
