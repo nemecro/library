@@ -40,6 +40,7 @@ modal.addEventListener('close', (e) => {
 });
 
 const readContainer = document.querySelector('#read-container');
+const wishlistContainer = document.querySelector('#wishlist-container');
 function createBookCard(obj, index){
     const bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
@@ -57,7 +58,11 @@ function createBookCard(obj, index){
     pages.classList.add('pages');
     pages.textContent = obj.pages;
 
-    readContainer.appendChild(bookCard);
+    if (obj.read === 'yes'){
+        readContainer.appendChild(bookCard);
+    } else {
+        wishlistContainer.appendChild(bookCard);
+    }
     bookCard.append(heading, subheading, pages);
 }
 
