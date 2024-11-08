@@ -139,6 +139,15 @@ h1 {
     padding: 0 1em 1em;
 
     border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.modal-form > * {
+    margin: 0;
+    padding: 0.7em;
 }
 
 .modal-header {
@@ -157,23 +166,15 @@ h1 {
     gap: 1em;
 }
 
-.label-input-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.label-group, .input-group {
+#book-information {
     display: flex;
     flex-direction: column;
     gap: 0.7em;
 }
 
-.label-group > label {
-    display: block;
-}
-
-.input-group > input {
-    display: block;
+.label-input {
+    display: flex;
+    flex-direction: column;
 }
 
 #add {
