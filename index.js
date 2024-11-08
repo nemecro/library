@@ -35,6 +35,10 @@ const modal = document.querySelector('.modal');
 modal.addEventListener('close', (e) => {
     if (modal.returnValue){
         console.log(modal.returnValue)
+        const values = modal.returnValue.split(',');
+        console.log(values);
+        addBookToLibrary(values[0], values[1], values[2], values[3]);
+        listLibrary(myLibrary);
     }
 });
 
