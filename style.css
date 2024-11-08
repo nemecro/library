@@ -29,6 +29,10 @@ body {
     margin: 0;
 }
 
+button {
+    cursor: pointer;
+}
+
 #navbar {
     background-color: var(--background);
     color: var(--text);
@@ -135,4 +139,15 @@ h1 {
     padding: 0 1em 1em;
 
     border-radius: 6px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#close-modal {
+    background-color: transparent;
+    border: none;
 }
