@@ -35,14 +35,15 @@ modal.addEventListener('close', (e) => {
 
         listLibrary(myLibrary);
         // add the book to the library html
-        createBookCard(myLibrary[myLibrary.length - 1]);
+        createBookCard(myLibrary[myLibrary.length - 1], myLibrary.length - 1);
     }
 });
 
 const readContainer = document.querySelector('#read-container');
-function createBookCard(obj){
+function createBookCard(obj, index){
     const bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
+    bookCard.setAttribute('data-attribute', index);
 
     const heading = document.createElement('h3');
     heading.classList.add('book-title');
