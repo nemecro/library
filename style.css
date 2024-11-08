@@ -136,7 +136,7 @@ h1 {
     background-color: var(--background);
     width: 50%;
     height: fit-content;
-    padding: 0 1em 1em;
+    padding: 1em;
 
     border-radius: 6px;
 
@@ -154,6 +154,11 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
+}
+
+.modal-header > h2 {
+    margin: 0;
 }
 
 #close-modal {
@@ -164,6 +169,10 @@ h1 {
 .form-field {
     display: flex;
     gap: 1em;
+}
+
+fieldset {
+    border-radius: 6px;
 }
 
 #book-information {
