@@ -31,9 +31,9 @@
 
             <fieldset>
                 <legend>Action</legend>
-                <input type="radio" name="read" id="read-yes" value="read" checked>
+                <input type="radio" name="read" id="read-yes" value="yes" checked>
                 <label for="read-yes">Add to read books</label>
-                <input type="radio" name="read" id="wishlist" value="wishlist">
+                <input type="radio" name="read" id="wishlist" value="no">
                 <label for="wishlist">Add to wishlist</label>
             </fieldset>
             <button id="add" class="btn-green" formmethod="dialog">Add</button>
@@ -67,7 +67,7 @@
 
         <section id="read">
             <h2>Read</h2>
-            <div class="books-grid-container">
+            <div class="books-grid-container" id="read-container">
 
                 <div class="book-card">
                     <h3 class="book-title">Crime and Punishment</h3>

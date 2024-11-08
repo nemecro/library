@@ -25,22 +25,40 @@ function listLibrary(library){
     })
 }
 
-addBookToLibrary('Crime and Punishment', 'Fyodor Dostoyev', 459, 'yes');
-
-listLibrary(myLibrary);
-
 const modal = document.querySelector('.modal');
 
 // when the modal is closed, check for values
 modal.addEventListener('close', (e) => {
     if (modal.returnValue){
-        console.log(modal.returnValue)
         const values = modal.returnValue.split(',');
-        console.log(values);
         addBookToLibrary(values[0], values[1], values[2], values[3]);
+
         listLibrary(myLibrary);
+        // add the book to the library html
+        createBookCard(myLibrary[myLibrary.length - 1]);
     }
 });
+
+const readContainer = document.querySelector('#read-container');
+function createBookCard(obj){
+    const bookCard = document.createElement('div');
+    bookCard.classList.add('book-card');
+
+    const heading = document.createElement('h3');
+    heading.classList.add('book-title');
+    heading.textContent = obj.title;
+
+    const subheading = document.createElement('h4');
+    subheading.classList.add('author');
+    subheading.textContent = obj.author;
+
+    const pages = document.createElement('p');
+    pages.classList.add('pages');
+    pages.textContent = obj.pages;
+
+    readContainer.appendChild(bookCard);
+    bookCard.append(heading, subheading, pages);
+}
 
 const openModelBtn = document.querySelector('#open-modal');
 openModelBtn.addEventListener('click', () => {
