@@ -29,9 +29,20 @@ addBookToLibrary('Crime and Punishment', 'Fyodor Dostoyev', 459, 'yes');
 
 listLibrary(myLibrary);
 
-const main = document.querySelector('main');
+const modal = document.querySelector('.modal');
 
-function displayModal(){
+const openModelBtn = document.querySelector('#open-modal');
+openModelBtn.addEventListener('click', () => {
+    modal.setAttribute('style', 'display: flex;');
+});
+
+const closeModalBtn = document.querySelector('#close-modal');
+
+closeModalBtn.addEventListener('click', () => {
+    modal.setAttribute('style', 'display: none;');
+});
+
+/* function displayModal(){
     const modal = document.createElement('div');
     const form = document.createElement('form');
     const titleLabel = document.createElement('label');
@@ -45,4 +56,5 @@ function displayModal(){
 }
 
 displayModal();
+*/
 
