@@ -37,12 +37,10 @@ openModelBtn.addEventListener('click', () => {
 });
 
 const closeModalBtn = document.querySelector('#close-modal');
-const addBtn = document.querySelector('#add');
 
 function closeModal(){
     modal.setAttribute('style', 'display: none;');
 }
 
 closeModalBtn.addEventListener('click', closeModal);
-addBtn.addEventListener('click', closeModal)
 
