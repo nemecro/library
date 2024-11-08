@@ -175,3 +175,7 @@ h1 {
 .input-group > input {
     display: block;
 }
+
+#add {
+    margin-top: 0.7em;
+}
