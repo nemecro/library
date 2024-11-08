@@ -33,7 +33,9 @@ const modal = document.querySelector('.modal');
 
 // when the modal is closed, check for values
 modal.addEventListener('close', (e) => {
-    console.log(modal.returnValue);
+    if (modal.returnValue){
+        console.log(modal.returnValue)
+    }
 });
 
 const openModelBtn = document.querySelector('#open-modal');
