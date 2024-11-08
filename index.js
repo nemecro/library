@@ -41,6 +41,15 @@ modal.addEventListener('close', (e) => {
 
 const readContainer = document.querySelector('#read-container');
 const wishlistContainer = document.querySelector('#wishlist-container');
+
+// addBookToLibrary('Crime and Punishment', 'Dostoyev', 539, 'yes');
+
+function refresh(){
+    myLibrary.forEach(book => {
+        createBookCard(book, myLibrary.indexOf(book));
+    })
+}
+
 function createBookCard(obj, index){
     const bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
@@ -65,10 +74,9 @@ function createBookCard(obj, index){
         myLibrary.splice(index, 1);
         const bookCards = document.querySelectorAll('.book-card')
         bookCards.forEach(book => {
-            if (book.getAttribute('data-attribute') == index){
-                book.remove();
-            }
+            book.remove();
         })
+        refresh();
     });
 
     if (obj.read === 'yes'){
