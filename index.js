@@ -37,24 +37,12 @@ openModelBtn.addEventListener('click', () => {
 });
 
 const closeModalBtn = document.querySelector('#close-modal');
+const addBtn = document.querySelector('#add');
 
-closeModalBtn.addEventListener('click', () => {
+function closeModal(){
     modal.setAttribute('style', 'display: none;');
-});
-
-/* function displayModal(){
-    const modal = document.createElement('div');
-    const form = document.createElement('form');
-    const titleLabel = document.createElement('label');
-    const titleInput = document.createElement('input');
-
-    modal.setAttribute('class', 'fullscreen-modal');
-
-    main.appendChild(modal);
-    modal.appendChild(form);
-    form.append(titleLabel, titleInput);
 }
 
-displayModal();
-*/
+closeModalBtn.addEventListener('click', closeModal);
+addBtn.addEventListener('click', closeModal)
 
