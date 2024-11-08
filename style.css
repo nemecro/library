@@ -116,6 +116,9 @@ h1 {
 
 .book-card {
     border: 1px solid var(--text);
+    border-radius: 6px;
+
+    box-shadow: 1px 1px 6px var(--text);
     text-align: center;
 }
 
@@ -127,7 +130,7 @@ h1 {
 
     z-index: 1;
 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
