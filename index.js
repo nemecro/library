@@ -58,12 +58,25 @@ function createBookCard(obj, index){
     pages.classList.add('pages');
     pages.textContent = obj.pages;
 
+    const removeBtn = document.createElement('button');
+    removeBtn.classList.add('btn-green');
+    removeBtn.textContent = 'Remove';
+    removeBtn.addEventListener('click', () => {
+        myLibrary.splice(index, 1);
+        const bookCards = document.querySelectorAll('.book-card')
+        bookCards.forEach(book => {
+            if (book.getAttribute('data-attribute') == index){
+                book.remove();
+            }
+        })
+    });
+
     if (obj.read === 'yes'){
         readContainer.appendChild(bookCard);
     } else {
         wishlistContainer.appendChild(bookCard);
     }
-    bookCard.append(heading, subheading, pages);
+    bookCard.append(heading, subheading, pages, removeBtn);
 }
 
 const openModelBtn = document.querySelector('#open-modal');
