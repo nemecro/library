@@ -151,3 +151,27 @@ h1 {
     background-color: transparent;
     border: none;
 }
+
+.form-field {
+    display: flex;
+    gap: 1em;
+}
+
+.label-input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.label-group, .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+}
+
+.label-group > label {
+    display: block;
+}
+
+.input-group > input {
+    display: block;
+}
