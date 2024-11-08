@@ -56,12 +56,16 @@ add.addEventListener('click', (event) => {
     event.preventDefault();
     let returnValue = [];
     formInputs.forEach(input => {
-        if (input.type === 'radio'){
-            if (input.checked === true){
+        if (!input.value){
+            modal.close();
+        } else {
+            if (input.type === 'radio'){
+                if (input.checked === true){
+                    returnValue.push(input.value);
+                }
+            } else {
                 returnValue.push(input.value);
             }
-        } else {
-            returnValue.push(input.value);
         }
     })
 
