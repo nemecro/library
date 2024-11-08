@@ -65,6 +65,11 @@ button {
     align-items: center;
 }
 
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 #library-logo {
     width: 1em;
 }
