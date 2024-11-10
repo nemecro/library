@@ -74,12 +74,19 @@ button {
     width: 1em;
 }
 
-.btn-green {
-    background-color: var(--green);
+.btn-green, .btn-red {
     color: var(--background);
     border: none;
     padding: 0.75em 1em;
     border-radius: 6px;
+}
+
+.btn-green {
+    background-color: var(--green);
+}
+
+.btn-red {
+    background-color: var(--red);
 }
 
 main {
@@ -139,6 +146,12 @@ h1 {
 
 .book-card * {
     margin: 0;
+}
+
+.card-button-container {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
 }
 
 .modal {
@@ -230,3 +243,4 @@ input[type=text]:focus, input[type=number]:focus{
     font-weight: 700;
     margin-top: 0.7em;
 }
+

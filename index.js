@@ -35,6 +35,10 @@ const readContainer = document.querySelector('#read-container');
 const wishlistContainer = document.querySelector('#wishlist-container');
 
 function refresh(){
+    const bookCards = document.querySelectorAll('.book-card')
+    bookCards.forEach(book => {
+        book.remove();
+    })
     myLibrary.forEach(book => {
         createBookCard(book, myLibrary.indexOf(book));
     })
@@ -58,23 +62,37 @@ function createBookCard(obj, index){
     pages.textContent = obj.pages;
 
     const removeBtn = document.createElement('button');
-    removeBtn.classList.add('btn-green');
+    removeBtn.classList.add('btn-red');
     removeBtn.textContent = 'Remove';
     removeBtn.addEventListener('click', () => {
         myLibrary.splice(index, 1);
-        const bookCards = document.querySelectorAll('.book-card')
-        bookCards.forEach(book => {
-            book.remove();
-        })
         refresh();
     });
+
+    const changeStatBtn = document.createElement('button');
+    changeStatBtn.classList.add('btn-green');
+    changeStatBtn.textContent = 'Change status';
+    changeStatBtn.addEventListener('click', () => {
+        if (obj.read === 'yes'){
+            obj.read = 'no';
+            refresh();
+        } else {
+            obj.read = 'yes';
+            refresh();
+        }
+    })
 
     if (obj.read === 'yes'){
         readContainer.appendChild(bookCard);
     } else {
         wishlistContainer.appendChild(bookCard);
     }
-    bookCard.append(heading, subheading, pages, removeBtn);
+
+    const cardButtonContainer = document.createElement('div');
+    cardButtonContainer.classList.add('card-button-container');
+
+    bookCard.append(heading, subheading, pages, cardButtonContainer);
+    cardButtonContainer.append(changeStatBtn, removeBtn);
 }
 
 const openModelBtn = document.querySelector('#open-modal');
