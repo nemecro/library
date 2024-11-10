@@ -19,12 +19,6 @@ function addBookToLibrary(title, author, pages, read){
     myLibrary.push(book);
 }
 
-function listLibrary(library){
-    library.forEach(book => {
-        console.table(book);
-    })
-}
-
 const modal = document.querySelector('.modal');
 
 // when the modal is closed, check for values
@@ -32,8 +26,6 @@ modal.addEventListener('close', (e) => {
     if (modal.returnValue){
         const values = modal.returnValue.split(',');
         addBookToLibrary(values[0], values[1], values[2], values[3]);
-
-        listLibrary(myLibrary);
         // add the book to the library html
         createBookCard(myLibrary[myLibrary.length - 1], myLibrary.length - 1);
     }
@@ -41,8 +33,6 @@ modal.addEventListener('close', (e) => {
 
 const readContainer = document.querySelector('#read-container');
 const wishlistContainer = document.querySelector('#wishlist-container');
-
-// addBookToLibrary('Crime and Punishment', 'Dostoyev', 539, 'yes');
 
 function refresh(){
     myLibrary.forEach(book => {
