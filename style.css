@@ -86,6 +86,10 @@ main {
     padding: 0 2.5em 10vh;
 }
 
+section {
+    margin-bottom: 3em;
+}
+
 #intro {
     padding: 2em;
     width: 60ch;
